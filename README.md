@@ -12,7 +12,7 @@ This project includes a set of Python scripts for generating images, performing 
 - [Google Cloud Logging and Google Analytics Integration](#google-cloud-logging-and-google-analytics-integration)
 
 ## Project Structure
-
+`````
 .
 ├── .gitignore                  # Files and directories to be ignored by git
 ├── README.md                   # Project documentation with instructions and details
@@ -25,6 +25,7 @@ This project includes a set of Python scripts for generating images, performing 
 │   └── google_analytics.png    # Screenshot showing Google Analytics event tracking
 ├── string_arithmetic.py        # Script for evaluating arithmetic expressions from strings
 └── unit_testing.py             # Unit tests for the project functionality
+`````
 
 
 ## Installation
