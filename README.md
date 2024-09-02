@@ -14,15 +14,16 @@ This project includes a set of Python scripts for generating images, performing 
 ## Project Structure
 `````
 .
+├── screenshots                 # Directory containing screenshots
+│   ├── cloud_logging.png       # Screenshot showing Google Cloud Logging integration
+│   └── google_analytics.png    # Screenshot showing Google Analytics event tracking
+├── .env.template               # Template for environment variables configuration
 ├── .gitignore                  # Files and directories to be ignored by git
 ├── README.md                   # Project documentation with instructions and details
 ├── find_max_image_size.py      # Script to test maximum image dimensions
 ├── generate_image.py           # FastAPI server for generating images based on user input
 ├── integration_testing.py      # Integration tests for the API endpoints
 ├── requirements.txt            # Dependencies required to run the project
-├── screenshots                 # Directory containing screenshots
-│   ├── cloud_logging.png       # Screenshot showing Google Cloud Logging integration
-│   └── google_analytics.png    # Screenshot showing Google Analytics event tracking
 ├── string_arithmetic.py        # Script for evaluating arithmetic expressions from strings
 └── unit_testing.py             # Unit tests for the project functionality
 `````
