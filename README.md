@@ -40,22 +40,29 @@ This project includes a set of Python scripts for generating images, performing 
     source venv/bin/activate  # For Windows, use venv\Scripts\activate
     pip install -r requirements.txt
     ```
-3. Set up Google Cloud Logging and Google Analytics:
+3. Set up Google Cloud Logging:
+    - Place your google_cloud_logging.json credentials file in the project root directory.
+    
+4. Set up Google Analytics:
+    - Copy the `.env.example` file to `.env` and fill in your GOOGLE_ANALYTICS_MEASUREMENT_ID and GOOGLE_ANALYTICS_API_SECRET.
 
-    - Place the google_cloud_logging.json credentials file in the project root directory.
-    - Configure the .env file with MEASUREMENT_ID and API_SECRET.
 
 ## Usage
 
-1. Run generate_image.py to start the FastAPI server:
+1. For question one which performs arithmetic calculations from a string input:
+    ```
+    python string_arithmetic.py
+    ```
+
+2. For question two which generates image from height and width input. Run generate_image.py to start the FastAPI server:
     ```
     uvicorn generate_image:app --reload
     ```
-2. You can test the API endpoint via browser or Postman:
+    
+3. You can test the API endpoint via browser or Postman:
     ```
     http://127.0.0.1:8000/generate_image?width=100&height=100
     ```
-3. Run string_arithmetic.py to perform arithmetic calculations from a string input.
 
 ## Features
 

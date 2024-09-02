@@ -18,9 +18,9 @@ logger = client.logger("api_usage_log")
 
 load_dotenv()
 
-MEASUREMENT_ID = os.getenv("MEASUREMENT_ID")
-API_SECRET = os.getenv("API_SECRET")
-GA_ENDPOINT = f"https://www.google-analytics.com/mp/collect?measurement_id={MEASUREMENT_ID}&api_secret={API_SECRET}"
+GOOGLE_ANALYTICS_MEASUREMENT_ID = os.getenv("GOOGLE_ANALYTICS_MEASUREMENT_ID")
+GOOGLE_ANALYTICS_API_SECRET = os.getenv("GOOGLE_ANALYTICS_API_SECRET")
+GA_ENDPOINT = f"https://www.google-analytics.com/mp/collect?measurement_id={GOOGLE_ANALYTICS_MEASUREMENT_ID}&api_secret={GOOGLE_ANALYTICS_API_SECRET}"
 
 def send_event_to_google_analytics(request, process_time, status_code):
     client_id = str(uuid.uuid4())
