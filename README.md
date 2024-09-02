@@ -12,19 +12,26 @@ This project includes a set of Python scripts for generating images, performing 
 - [Google Cloud Logging and Google Analytics Integration](#google-cloud-logging-and-google-analytics-integration)
 
 ## Project Structure
-  ├── .gitignore # Git ignore file
-  ├── string_arithmetic.py # Python implementation for string arithmetic operations 
-  ├── generate_image.py # FastAPI implementation for image generation API 
-  ├── find_max_image_size.py # Script to test the maximum image size that can be generated
-  ├── unit_testing.py # Unit testing script 
-  └── integration_testing.py # Integration testing script
+
+.
+├── .gitignore                  # Files and directories to be ignored by git
+├── README.md                   # Project documentation with instructions and details
+├── find_max_image_size.py      # Script to test maximum image dimensions
+├── generate_image.py           # FastAPI server for generating images based on user input
+├── integration_testing.py      # Integration tests for the API endpoints
+├── requirements.txt            # Dependencies required to run the project
+├── screenshots                 # Directory containing screenshots
+│   ├── cloud_logging.png       # Screenshot showing Google Cloud Logging integration
+│   └── google_analytics.png    # Screenshot showing Google Analytics event tracking
+├── string_arithmetic.py        # Script for evaluating arithmetic expressions from strings
+└── unit_testing.py             # Unit tests for the project functionality
+
 
 ## Installation
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your_username/your_repository.git
-   cd your_repository
+   git clone https://github.com/anne116/generate_image_assignment.git
    ```
 2. Create a virtual environment and install the required dependencies:
     ```
@@ -33,20 +40,21 @@ This project includes a set of Python scripts for generating images, performing 
     pip install -r requirements.txt
     ```
 3. Set up Google Cloud Logging and Google Analytics:
-    I. Place the google_cloud_logging.json credentials file in the project root directory.
-    II. Configure the .env file with MEASUREMENT_ID and API_SECRET.
+
+    - Place the google_cloud_logging.json credentials file in the project root directory.
+    - Configure the .env file with MEASUREMENT_ID and API_SECRET.
 
 ## Usage
 
-Run generate_image.py to start the FastAPI server:
+1. Run generate_image.py to start the FastAPI server:
     ```
     uvicorn generate_image:app --reload
     ```
-You can test the API endpoint via browser or Postman:
+2. You can test the API endpoint via browser or Postman:
     ```
     http://127.0.0.1:8000/generate_image?width=100&height=100
     ```
-Run string_arithmetic.py to perform arithmetic calculations from a string input.
+3. Run string_arithmetic.py to perform arithmetic calculations from a string input.
 
 ## Features
 
@@ -58,11 +66,11 @@ Run string_arithmetic.py to perform arithmetic calculations from a string input.
 
 ## Testing
 
-Run the following command to execute unit tests:
+- Run the following command to execute unit tests:
     ```
     pytest unit_testing.py
     ```
-Run the following command to execute integration tests:
+- Run the following command to execute integration tests:
     ```
     pytest integration_testing.py
     ```
@@ -72,7 +80,9 @@ Run the following command to execute integration tests:
 The API usage and execution events have been successfully logged to Google Cloud Logging and Google Analytics. Below are the steps and configurations:
 
 1. **Google Cloud Logging**: Configured using `google_cloud_logging.json` and Python's Google Cloud Client.
-2. **Google Analytics**: Implemented event tracking using Measurement Protocol with the correct `MEASUREMENT_ID` and `API_SECRET`.
 
 ![Google Cloud Logging Screenshot](screenshots/cloud_logging.png)
+
+2. **Google Analytics**: Implemented event tracking using Measurement Protocol with the correct `MEASUREMENT_ID` and `API_SECRET`.
+
 ![Google Analytics Screenshot](screenshots/google_analytics.png)
